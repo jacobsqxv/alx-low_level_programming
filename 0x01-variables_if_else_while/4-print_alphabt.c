@@ -3,17 +3,24 @@
 /* more headers goes there */
 #include <stdio.h>
 
-/* betty style doc for function main goes there */
+/**
+ * main - Entry point
+ *
+ * Description: using main function
+ * this program prints alphabets
+ * Return: 0
+ */
 int main(void)
 {
 	char c;
 
 	for (c = 'a'; c <= 'z'; c++)
 	{
-		if (c != 'e' && c != 'q')
+		if (c == 'e' && c == 'q')
 		{
-			putchar(c);
+			continue;
 		}
+		putchar(c);
 	}
 	putchar('\n');
 	return (0);
