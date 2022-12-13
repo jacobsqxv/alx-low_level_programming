@@ -4,7 +4,8 @@
 /**
  * _isalpha: Entry point
  * @c: input character
- * Description: Print 1 if c is letter and 0 if otherwise
+ * Description: using _isalpha
+ * Print 1 if c is letter and 0 if otherwise
  * Return: 0
  */
 
