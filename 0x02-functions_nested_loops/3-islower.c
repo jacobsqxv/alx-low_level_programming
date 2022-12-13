@@ -2,8 +2,8 @@
 #include "main.h"
 
 /**
- * _islower(int c) - Entry point
- *
+ * _islower - Entry point
+ * c - input character
  * Description: print 0 if c is lower and 1 if c is not lower
  * Return: 0
  */
