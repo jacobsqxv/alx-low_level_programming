@@ -1,5 +1,5 @@
-int _putchar(int *ch)
+int _putchar(int ch)
 {
-	putchar(*ch + '0');
-	return (*ch + '0');
+	putchar(ch + '0');
+	return (ch + '0');
 }
