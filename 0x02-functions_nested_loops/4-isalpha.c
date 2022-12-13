@@ -5,8 +5,7 @@
  * _isalpha: Entry point
  * @c: input character
  * Description: using _isalpha
- * Print 1 if c is letter and 0 if otherwise
- * Return: 0
+ * Return: print 1 if c is letter and 0 if otherwise
  */
 
 int _isalpha(int c)
