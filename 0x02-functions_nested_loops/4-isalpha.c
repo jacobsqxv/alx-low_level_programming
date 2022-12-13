@@ -2,7 +2,7 @@
 #include "main.h"
 
 /**
- * _isalpha: function that checks for alphabetic character
+ * _isalpha - function that checks for alphabetic character
  * @c: input character
  * Description: using _isalpha
  * Return: print 1 if c is letter and 0 if otherwise
