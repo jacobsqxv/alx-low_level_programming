@@ -3,7 +3,7 @@
 
 /**
  * _islower - Entry point
- * @c - input character
+ * @c: input character
  * Description: print 0 if c is lower and 1 if c is not lower
  * Return: 0
  */
