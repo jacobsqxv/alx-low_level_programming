@@ -1,5 +1,4 @@
 #include "main.h"
-#include <stdlib.h>
 
 /**
  * _isdigit - function
@@ -10,7 +9,7 @@
 
 int _isdigit(int c)
 {
-	if (isdigit(c))
+	if (c >= 0 || c <= 9)
 	{
 		return (1);
 	}
