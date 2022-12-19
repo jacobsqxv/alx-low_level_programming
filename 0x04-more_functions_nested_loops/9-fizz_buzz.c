@@ -1,41 +1,35 @@
 #include <stdio.h>
 
 /**
- * main - entry point
- * Description: print FizzBuzz
- * Return: 0
+ * main -  checks for checks for a digit (0 through 9).
+ * Return: Always 0.
  */
-
 int main(void)
 {
-	int i = 1;
+	int x;
 
-	for (i = 1; i <= 100; i++)
+	for (x = 1; x <= 100; x++)
 	{
-		if (i % 3 == 0)
+		if (x % 3 == 0 || x % 5 == 0)
 		{
-			printf("%s", "Fizz");
-		}
-		else if (i % 5 == 0)
-		{
-			printf("%s", "Buzz");
-		}
-		else if (i % 3 == 0 && i % 5 == 0)
-		{
-			printf("%s", "FizzBuzz");
+			if (x % 3 == 0)
+			{
+				printf("Fizz");
+			}
+			if (x % 5 == 0)
+			{
+				printf("Buzz");
+			}
 		}
 		else
 		{
-			printf("%d ", i);
+			printf("%d", x);
 		}
-
-		if (i != 100)
+		if (x != 100)
 		{
-			printf(" ");
+		putchar(' ');
 		}
 	}
-
-	printf("\n");
-
+	putchar('\n');
 	return (0);
 }
