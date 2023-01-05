@@ -1,30 +1,33 @@
 #include "main.h"
 
 /**
- * _sqrt_recursion - main function
- * @n: int n
- * Return: int
+ * sqrt_a - function
+ * @a: number
+ * @b: number of power
+ * Return: Always 0.
+ */
+
+int sqrt_a(int a, int b)
+{
+	if (b * b == a)
+	{
+		return (b);
+	}
+	else if (b * b > a)
+	{
+		return (-1);
+	}
+	return (sqrt_a(a, b + 1));
+}
+
+/**
+ * _sqrt_recursion - check the code for Holberton School students.
+ * @n: number
+ *
+ * Return: Always 0.
  */
 
 int _sqrt_recursion(int n)
 {
-	return (_sqrt(n, 1));
-}
-
-/**
- * _sqrt - _sqrt_recursion
- * @n: integer paramtr
- * @i: integer parameter
- * Return: sqrt
- */
-
-int _sqrt(int n, int i)
-{
-	if (n < 0)
-		return (-1);
-	if ((i * i) > n)
-		return (-1);
-	if (i * i == n)
-		return (i);
-	return (_sqrt(n, i + 1));
+	return (sqrt_a(n, 0));
 }
