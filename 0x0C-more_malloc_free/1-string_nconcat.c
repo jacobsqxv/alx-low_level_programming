@@ -27,32 +27,31 @@ int _strlen(char *s)
 
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
-	char *str;
-	unsigned int len1, len2, i;
+	char *ptr;
+	int num, len, i, j;
 
-	if (s1 == NULL)
+	num = n;
+
+	if (s1 == NULL) /* account for NULL strings */
 		s1 = "";
 	if (s2 == NULL)
 		s2 = "";
-
-	len1 = strlen(s1);
-	len2 = strlen(s2);
-
-	if (n < len2)
-		len2 = n;
-
-	str = malloc(len1 + len2 + 1);
-
-	if (str == NULL)
-	{
+	if (num < 0) /* account for negative n bytes */
 		return (NULL);
-	}
+	if (num >= _strlen(s2)) /* account for n too big */
+		num = _strlen(s2);
 
-	for (i = 0; i < len1; i++)
-		*(str + i) = *(s1 + i);
+	len = _strlen(s1) + num + 1; /* +1 to account for null pointer */
 
-	for (i = 0; i < len2; i++)
-		*(str + (i + len1)) = *(s2 + i);
-	*(str + (i + len1)) = '\0';
-	return (str);
+	ptr = malloc(sizeof(*ptr) * len); /* malloc and check for error */
+	if (ptr == NULL)
+		return (NULL);
+
+	for (i = 0; s1[i] != '\0'; i++) /* concat */
+		ptr[i] = s1[i];
+	for (j = 0; j < num; j++)
+		ptr[i + j] = s2[j];
+	ptr[i + j] = '\0';
+
+	return (ptr);
 }
