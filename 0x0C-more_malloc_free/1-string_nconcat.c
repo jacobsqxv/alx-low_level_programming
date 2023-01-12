@@ -1,4 +1,6 @@
 #include "main.h"
+#include <stdio.h>
+#include <stdlib.h>
 
 /**
  * _strlen - function
@@ -52,6 +54,5 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	for (i = 0; i < len2; i++)
 		*(str + (i + len1)) = *(s2 + i);
 	*(str + (i + len1)) = '\0';
-
 	return (str);
 }
