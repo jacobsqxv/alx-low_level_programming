@@ -7,8 +7,8 @@ fmt:	    	db "%s", 10, 0          ; printf format, "\n",'0'
 	        section .text		; Code section.
 
 	        global main		; standard gcc entry point
-main:					; the program label for the entry point
-	        push    rbp		; set up stack frame, must be alligned
+main:					; label for the entry point
+	        push    rbp		; set stack frame
 
 		mov	rdi,fmt
 		mov	rsi,msg
